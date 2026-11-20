@@ -90,6 +90,42 @@ footer {
 @media (min-width: 600px) {
   .services { grid-template-columns: repeat(3, 1fr); }
 }
+
+nav img {
+  width: 110px !important;
+  max-width: 35% !important;
+  height: auto;
+  object-fit: contain;
+}
+
+nav span {
+  font-size: 16px;
+  text-align: right;
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 14px 16px;
+  }
+
+  nav {
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
+
+  nav img {
+    width: 105px !important;
+    max-width: 45% !important;
+  }
+
+  nav span {
+    text-align: center;
+    font-size: 15px;
+  }
+}
+
 </style>
 </head>
 
