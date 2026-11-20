@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TechBridge Solutions</title>
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f7fb;
+  color: #172b4d;
+}
+
+header {
+  background: #102b50;
+  color: white;
+  padding: 22px 18px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+nav h2 { margin: 0; }
+
+.hero {
+  background: #102b50;
+  color: white;
+  text-align: center;
+  padding: 65px 20px;
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin: 0 0 18px;
+}
+
+.hero p {
+  line-height: 1.7;
+  font-size: 17px;
+}
+
+.button {
+  display: inline-block;
+  background: #08a078;
+  color: white;
+  padding: 14px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-top: 15px;
+}
+
+section {
+  padding: 35px 18px;
+  text-align: center;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  max-width: 850px;
+  margin: auto;
+}
+
+.service {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px #00000010;
+}
+
+.service h3 { color: #087f68; }
+
+footer {
+  background: #102b50;
+  color: white;
+  padding: 25px;
+  text-align: center;
+}
+
+@media (min-width: 600px) {
+  .services { grid-template-columns: repeat(3, 1fr); }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <h2>TechBridge Solutions</h2>
+    <span>Technology for Growth</span>
+  </nav>
+</header>
+
+<div class="hero">
+  <h1>Technology That Moves Your Business Forward</h1>
+  <p>We help businesses grow with modern websites, software and AI automation.</p>
+  <a class="button"
+     href="https://wa.me/2349121218802">
+     Contact Our Team
+  </a>
+</div>
+
+<section>
+  <h2>Our Services</h2>
+
+  <div class="services">
+    <div class="service">
+      <h3>Website Development</h3>
+      <p>Professional websites that help businesses reach more customers.</p>
+    </div>
+
+    <div class="service">
+      <h3>Software Development</h3>
+      <p>Useful digital applications designed to solve business problems.</p>
+    </div>
+
+    <div class="service">
+      <h3>AI Automation</h3>
+      <p>Smart automation to help businesses save time and work efficiently.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Let's Build Something Great</h2>
+  <p>Have a business idea or project? Let's talk.</p>
+  <a class="button" href="https://wa.me/2349121218802">
+    Chat With Us
+  </a>
+</section>
+
+<footer>
+  <p>© 2026 TechBridge Solutions</p>
+  <p>Technology. Innovation. Growth.</p>
+</footer>
+
+
+<section id="contact">
+  <h2>Tell Us About Your Project</h2>
+  <p>Send us your requirements and let's discuss your idea.</p>
+
+  <form id="enquiryForm" style="max-width:500px;margin:auto;text-align:left;">
+    <label>Your Name</label>
+    <input name="name" required placeholder="Enter your name">
+
+    <label>Business Name</label>
+    <input name="business" placeholder="Your business name">
+
+    <label>Service Needed</label>
+    <select name="service" required>
+      <option value="">Choose a service</option>
+      <option>Website Development</option>
+      <option>Software Development</option>
+      <option>AI Automation</option>
+    </select>
+
+    <label>Project Details</label>
+    <textarea name="details" required placeholder="Tell us what you need"></textarea>
+
+    <button type="submit">Send Enquiry</button>
+  </form>
+</section>
+
+<style>
+#contact input, #contact select, #contact textarea {
+  display:block;
+  width:100%;
+  padding:13px;
+  margin:8px 0 18px;
+  border:1px solid #ccc;
+  border-radius:7px;
+  font-size:16px;
+}
+#contact label { font-weight:bold; }
+</style>
+
+<script>
+document.getElementById("enquiryForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+  const data = new FormData(this);
+  const message = "Hello TechBridge Solutions!%0A" +
+    "Name: " + encodeURIComponent(data.get("name")) + "%0A" +
+    "Business: " + encodeURIComponent(data.get("business")) + "%0A" +
+    "Service: " + encodeURIComponent(data.get("service")) + "%0A" +
+    "Details: " + encodeURIComponent(data.get("details"));
+
+  window.location.href = "https://wa.me/2349121218802?text=" + message;
+});
+</script>
+
+</body>
+</html>
